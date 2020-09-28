@@ -9,6 +9,9 @@ public class Projeto {
 	private Engenheiro engenheiroResponsavel = null;
 	private Balanco balanco = new Balanco();
 	
+	public Projeto() {
+	}
+	
 	public Projeto(String nome) {
 		this.setNome(nome);
 	}
@@ -33,12 +36,12 @@ public class Projeto {
 		this.clientes.add(cliente);
 	}
 	
-	public void registrarGasto(Gasto gasto) {
-		this.balanco.registrarGasto(gasto);
+	public boolean checarAcessoDeCliente(Cliente cliente) {
+		return this.clientes.contains(cliente);
 	}
-	
-	public void registrarPagamento(Pagamento pagamento) {
-		this.balanco.registrarPagamento(pagamento);
+
+	public Balanco getBalanco() {
+		return this.balanco;
 	}
 	
 	public String toString() {

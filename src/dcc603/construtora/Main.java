@@ -27,10 +27,10 @@ public class Main {
 		// Simula balanco do projeto
 		{
 			Gasto gasto = new Gasto(1000, "registro na prefeitura", "a nota fiscal");
-			projeto.registrarGasto(gasto);
+			projeto.getBalanco().registrarGasto(gasto);
 			
 			Pagamento pagamento = new Pagamento(500, "primeira parcela", "o comprovante");
-			projeto.registrarPagamento(pagamento);	
+			projeto.getBalanco().registrarPagamento(pagamento);	
 		}
 		
 		System.out.println(projeto);
